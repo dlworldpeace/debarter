@@ -12,6 +12,7 @@
 		"test": "jest"
 	},
 	"dependencies": {
+		"@openzeppelin/contracts": "^2.4.0",
 		"@babel/runtime": "^7.7.2",
 		"npm-reinstall": "^3.1.0",
 		"react": "16.6.3",
