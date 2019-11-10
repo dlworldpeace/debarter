@@ -1,4 +1,4 @@
-package com.tinderreact;
+package com.debarter;
 
 import android.app.Application;
 
