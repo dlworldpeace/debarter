@@ -40,7 +40,7 @@ const Home = () => {
                 matches={item.match}
                 actions
                 onPressLike={() => item.id === 3 ? matchFound() : this.swiper.swipeRight()}
-                onPressdislike={() => this.swiper.swipeLeft()}
+                onPressDislike={() => this.swiper.swipeLeft()}
               />
             </Card>
           ))}

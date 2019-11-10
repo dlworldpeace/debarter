@@ -1,12 +1,19 @@
 import React from "react";
 import { Text } from "react-native";
 import { createBottomTabNavigator, createAppContainer } from "react-navigation";
+import { createStackNavigator } from 'react-navigation-stack';
 import styles from "./assets/styles";
 import HomeScreen from "./containers/Home";
 import MatchesScreen from "./containers/Matches";
 import MessagesScreen from "./containers/Messages";
 import ProfileScreen from "./containers/Profile";
+import ChatScreen from "./containers/Chat";
 import Icon from "./components/Icon";
+
+const ChatNavigator = createStackNavigator({
+	Messages: {screen: MessagesScreen},
+	Chat: {screen: ChatScreen},
+});
 
 const App = createBottomTabNavigator(
 	{
@@ -37,7 +44,7 @@ const App = createBottomTabNavigator(
 			}
 		},
 		Chat: {
-			screen: MessagesScreen,
+			screen: ChatNavigator,
 			navigationOptions: {
 				tabBarIcon: ({ focused }) => {
 					const iconFocused = focused ? "#7444C0" : "#363636";
