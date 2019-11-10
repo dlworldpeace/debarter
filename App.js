@@ -11,9 +11,34 @@ import ChatScreen from "./containers/Chat";
 import Icon from "./components/Icon";
 
 const ChatNavigator = createStackNavigator({
-	Messages: {screen: MessagesScreen},
-	Chat: {screen: ChatScreen},
+	Messages: {
+		screen: MessagesScreen,
+		navigationOptions: {
+			header: null,
+		}
+	},
+	Chat: {
+		screen: ChatScreen,
+		navigationOptions: {
+			header: null,
+		}
+	},
 });
+
+ChatNavigator.navigationOptions = ({ navigation }) => {
+
+    let tabBarVisible = true;
+
+    let routeName = navigation.state.routes[navigation.state.index].routeName
+
+    if ( routeName == 'Chat' ) {
+        tabBarVisible = false
+    }
+
+    return {
+        tabBarVisible,
+    }
+}
 
 const App = createBottomTabNavigator(
 	{
