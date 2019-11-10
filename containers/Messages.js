@@ -34,11 +34,7 @@ const Messages = () => {
             data={Demo}
             keyExtractor={(item, index) => index.toString()}
             renderItem={({ item }) => (
-              <TouchableOpacity
-              onPress={() => {
-              alert('You tapped the button!');
-              }}
-              >
+              <TouchableOpacity>
                 <Message
                   image={item.image}
                   name={item.name}
