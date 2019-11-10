@@ -10,8 +10,8 @@ const CardItem = ({
   image,
   matches,
   name,
-  onPressLeft,
-  onPressRight,
+  onPressLike,
+  onPressDislike,
   status,
   variant
 }) => {
@@ -44,7 +44,7 @@ const CardItem = ({
       {matches && (
         <View style={styles.matchesCardItem}>
           <Text style={styles.matchesTextCardItem}>
-            <Icon name="heart" /> {matches}% Match!
+            {matches} people want this!
           </Text>
         </View>
       )}
@@ -74,16 +74,13 @@ const CardItem = ({
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.button} onPress={() => onPressLeft()}>
+          <TouchableOpacity style={styles.button} onPress={() => onPressLike()}>
             <Text style={styles.like}>
               <Icon name="like" />
             </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => onPressRight()}
-          >
+          <TouchableOpacity style={styles.button} onPress={() => onPressDislike()}>
             <Text style={styles.dislike}>
               <Icon name="dislike" />
             </Text>

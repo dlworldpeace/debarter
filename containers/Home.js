@@ -8,6 +8,12 @@ import styles from '../assets/styles';
 import Demo from '../assets/data/demo.js';
 
 const Home = () => {
+
+  function matchFound() {
+    alert("match found!");
+    this.swiper.swipeRight();
+  }
+
   return (
     <ImageBackground
       source={require('../assets/images/bg.png')}
@@ -33,8 +39,8 @@ const Home = () => {
                 description={item.description}
                 matches={item.match}
                 actions
-                onPressLeft={() => this.swiper.swipeLeft()}
-                onPressRight={() => this.swiper.swipeRight()}
+                onPressLike={() => item.id === 3 ? matchFound() : this.swiper.swipeRight()}
+                onPressdislike={() => this.swiper.swipeLeft()}
               />
             </Card>
           ))}
