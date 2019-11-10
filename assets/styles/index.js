@@ -342,8 +342,16 @@ export default StyleSheet.create({
 
 	// CHAT
 	confirmButton: {
-		position: 'absolute',
-		bottom:0,
-		left:0,
+		color: PRIMARY_COLOR,
+	},
+	bottom: {
+		paddingTop: 700,
+		marginHorizontal: 90,
+		flexDirection: "row",
+		justifyContent: "space-between",
+		alignItems: "center",
+	},
+	transactionID: {
+		paddingTop: 500,
 	},
 });
