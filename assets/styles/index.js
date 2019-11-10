@@ -338,5 +338,12 @@ export default StyleSheet.create({
 		fontFamily: ICON_FONT,
 		height: 20,
 		paddingBottom: 7
-	}
+	},
+
+	// CHAT
+	confirmButton: {
+		position: 'absolute',
+		bottom:0,
+		left:0,
+	},
 });
