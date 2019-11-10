@@ -79,6 +79,12 @@ module.exports = [
 		match: '85',
 		description:
 			'Great for storage.',
+		age: '3 years',
+		location: 'Irvine, CA',
+		info1: 'Made of Oak',
+		info2: 'Height 4"10',
+		info3: 'Weight 34 lbs',
+		info4: 'Warranty',
 		status: 'Online',
 		message:
 			"Listen, trade me anything for this.",
