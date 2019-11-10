@@ -16,7 +16,7 @@ class Chat extends Component {
     this.state = {
       buttonShown: true,
       txnIDShown: false,
-      txnID: '0xiuhe2u8921heouhad0hj89ha89shd0w2niodjw2l',
+      txnID: '0xa91bdf47aea48289ce483cad2fe2f229d6275d61e5fa66e9b6bf387f4752dc04',
     };
   }
 
